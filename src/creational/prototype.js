@@ -1,3 +1,4 @@
+// Option 1
 class Blanket {
   constructor(width, length, material) {
     this.width=width;
@@ -9,3 +10,15 @@ class Blanket {
     return new Blanket(this.width, this.length, this.material);
   }
 }
+
+
+// Option 2
+const maschine = {
+  type: 'printer',
+
+  print() {
+    console.log(`This is ${this.type} and it's model is ${this.model}`)
+  }
+}
+
+const newMaschine = Object.create(maschine, {model: { value: 'cannon' } });
