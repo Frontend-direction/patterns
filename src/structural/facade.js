@@ -29,7 +29,7 @@ class ComplainRegistry {
     let complain;
 
     if(type === 'ordinary') {
-        complain = new OrdinaryComplains();
+      complain = new OrdinaryComplains();
     } else {  
       complain = new SeriousComplains();
     }
