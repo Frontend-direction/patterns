@@ -1,4 +1,4 @@
-class WindowsConfig {
+export class WindowsConfig {
   constructor(device) {
     this.os='Windows';
     this.specificSymbols='*/'; 
@@ -6,7 +6,7 @@ class WindowsConfig {
   }
 }
 
-class LinuxConfig {
+export class LinuxConfig {
   constructor(device) {
     this.os='Linux';
     this.specificSymbols='$'; 
@@ -14,7 +14,7 @@ class LinuxConfig {
   }
 }
 
-class MacConfig {
+export class MacConfig {
   constructor(device) {
     this.os='MacOS';
     this.specificSymbols='~'; 
@@ -22,15 +22,15 @@ class MacConfig {
   }
 }
 
-class OsFactory {
+export class OsFactory {
   static osList = {
     windows: WindowsConfig,
     linux: LinuxConfig,
     mac: MacConfig
   }
 
-  create(device, type='windows') {
-    const OperationSystem = OsFactory.osList[type] || OsFactory.list.windows;
+  static create(device, type='windows') {
+    const OperationSystem = OsFactory.osList[type] || OsFactory.osList.windows;
     const config = new OperationSystem(device);
 
     return config;
