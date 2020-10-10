@@ -1,5 +1,4 @@
-
-class IceCreamStickFactory {
+export class IceCreamStickFactory {
   getChocolateIceCream() {
     return new ChocolateIceCream();
   }
@@ -9,7 +8,7 @@ class IceCreamStickFactory {
   }
 }
 
-class IceCreamBarFactory {
+export class IceCreamBarFactory {
   getChocolateIceCream() {
     return new ChocolateIceCream();
   }
@@ -19,13 +18,13 @@ class IceCreamBarFactory {
   }
 }
 
-class ChocolateIceCream {
+export class ChocolateIceCream {
   getInfo() {
     return 'This is quite sweet but in the same time delicious ice-cream';
   }
 }
 
-class VanilaIceCream {
+export class VanilaIceCream {
   getInfo() {
     return 'If you try it once you will never forget it\'s taste';
   }
