@@ -1,4 +1,4 @@
-class OldCalc {
+export class OldCalc {
   operations(num1, num2, operand) {
     switch(operand) {
       case 'add': return num1 + num2;
@@ -8,7 +8,7 @@ class OldCalc {
   }
 }
 
-class newCalc {
+export class newCalc {
   add(num1, num2) {
     return num1 + num2;
   }
@@ -18,7 +18,7 @@ class newCalc {
   }
 }
 
-class calcAdapter {
+export class calcAdapter {
   constructor() {
     this.calc = new newCalc();
   }
@@ -26,7 +26,7 @@ class calcAdapter {
   operations(num1, num2, operand) {
     switch(operand) {
       case 'add': return this.calc.add(num1, num2);
-      case 'sub': return this.calc.add(num1, num2);
+      case 'sub': return this.calc.subtract(num1, num2);
       default: return NaN;
     }
   }
