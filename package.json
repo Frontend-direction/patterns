@@ -8,9 +8,8 @@
   },
   "scripts": {
     "test": "mocha test --require @babel/register",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- 'test/**/*.js' --compilers js:babel-core/register",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "build": "npm run test; npm run format; npm run build-docs"
+    "coverage": "nyc npm run test",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,8 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.11.5",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
     "glob": "^7.1.6",
