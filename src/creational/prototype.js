@@ -1,5 +1,5 @@
 // Option 1
-class Blanket {
+export class Blanket {
   constructor(width, length, material) {
     this.width=width;
     this.length=length;
@@ -13,7 +13,7 @@ class Blanket {
 
 
 // Option 2
-const maschine = {
+export const maschine = {
   type: 'printer',
 
   print() {
