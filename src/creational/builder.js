@@ -1,4 +1,4 @@
-class Task {
+export class Task {
   constructor() {
     this.name = '';
     this.description = '';
@@ -7,7 +7,7 @@ class Task {
   }
 }
 
-class TaskCreator {
+export class TaskCreator {
   constructor() {
     this.task = new Task();
   }
