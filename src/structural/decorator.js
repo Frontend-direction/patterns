@@ -1,4 +1,4 @@
-class Cheesburger {
+export class Cheesburger {
   constructor() {
     this.price=10;
   }
@@ -9,7 +9,7 @@ class Cheesburger {
 }
 
 
-class SauseDecorator extends Cheesburger {
+export class SauseDecorator extends Cheesburger {
   constructor(burger) {
     super();
     this.burger=burger
@@ -20,7 +20,7 @@ class SauseDecorator extends Cheesburger {
   }
 }
 
-class SaladDecorator extends Cheesburger {
+export class SaladDecorator extends Cheesburger {
   constructor(burger) {
     super();
     this.burger=burger;
