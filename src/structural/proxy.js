@@ -11,7 +11,7 @@ function LibraryApi() {
 }
 
 const cashe = new Map();
-function ProxyLibrary () {
+export function ProxyLibrary () {
   this.api = new LibraryApi();
   this.getBooks = function (author) {
     if(cashe.get(author)){
