@@ -4,7 +4,7 @@ class Color {
   }
 }
 
-class ColorFactory {
+export class ColorFactory {
   constructor() {
     this.colors={}
   }

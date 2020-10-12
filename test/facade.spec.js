@@ -8,6 +8,7 @@ describe('facade pattern', () => {
     const regNewComplain = new ComplainRegistry();
     const result = regNewComplain.register('Vova', 'ordinary', 'why I don\'t have warm water in my hause');
     const time = new Date();
+
     expect(result).to.equal(`Level: ordinary, id: ${time}, customer: Vova, details: why I don\'t have warm water in my hause`);
   });
 
@@ -15,6 +16,7 @@ describe('facade pattern', () => {
     const regNewComplain = new ComplainRegistry();
     const result = regNewComplain.register('Vova', 'serious', 'why I don\'t have warm water in my hause');
     const time = new Date();
+    
     expect(result).to.equal(`Level: serious, id: ${time}, customer: Vova, details: why I don\'t have warm water in my hause`);
   });
 
