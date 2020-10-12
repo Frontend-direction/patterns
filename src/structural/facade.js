@@ -1,4 +1,4 @@
-class Complaints {
+export class Complaints {
   constructor() {
     this.complaints = [];
   }
@@ -11,20 +11,20 @@ class Complaints {
   }
 }
 
-class OrdinaryComplains extends Complaints {
+export class OrdinaryComplains extends Complaints {
   reply({ id, customer, details }) {
     return `Level: ordinary, id: ${id}, customer: ${customer}, details: ${details}`;
   }
 }
 
-class SeriousComplains extends Complaints {
+export class SeriousComplains extends Complaints {
   reply({ id, customer, details }) {
     return `Level: serious, id: ${id}, customer: ${customer}, details: ${details}`;
   }
 }
 
-class ComplainRegistry {
-  register(customer, type, detail) {
+export class ComplainRegistry {
+  register(customer, type, details) {
     const id = new Date();
     let complain;
 
@@ -34,7 +34,7 @@ class ComplainRegistry {
       complain = new SeriousComplains();
     }
 
-    return complain.add({id, customer, detail});
+    return complain.add({id, customer, details});
   }
 }
 
