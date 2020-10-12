@@ -1,10 +1,10 @@
-class BookReader {
+export class BookReader {
   constructor(screen) {
     this.screen = screen;
   }
 }
 
-class Kindle extends BookReader {
+export class Kindle extends BookReader {
   constructor(screen) {
     super(screen);
   }
@@ -14,7 +14,7 @@ class Kindle extends BookReader {
   }
 }
 
-class Screen {
+export class Screen {
   constructor(type) {
     this.type=type;
   }
@@ -24,13 +24,13 @@ class Screen {
   }
 }
 
-class MonoChromeScreen extends Screen {
+export class MonoChromeScreen extends Screen {
   constructor() {
     super('monochrome')
   }
 }
 
-class ColorScreen extends Screen {
+export class ColorScreen extends Screen {
   constructor() {
     super('color');
   }
