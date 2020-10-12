@@ -1,4 +1,4 @@
-class Equipment {
+export class Equipment {
   getPrice() {
     return this.price || 0;
   }
@@ -8,7 +8,7 @@ class Equipment {
   }
 }
 
-class Composite extends Equipment {
+export class Composite extends Equipment {
 
   constructor() {
     super();
@@ -28,14 +28,14 @@ class Composite extends Equipment {
   }
 }
 
-class Cabinet extends Composite {
+export class Cabinet extends Composite {
   constructor() {
     super();
     this.setName('cabinet');
   }
 }
 
-class Chair extends Equipment {
+export class Chair extends Equipment {
   constructor() {
     super();
     this.setName('Plastic Chair');
@@ -44,7 +44,7 @@ class Chair extends Equipment {
 }
 
 
-class Table extends Equipment {
+export class Table extends Equipment {
   constructor() {
     super();
     this.setName('Wood table');
