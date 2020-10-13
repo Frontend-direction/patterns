@@ -1,4 +1,4 @@
-class Plant {
+export class Plant {
   constructor(isWorking=false) {
     this.isWorking=isWorking
   }
@@ -12,7 +12,7 @@ class Plant {
   }
 }
 
-class Command {
+export class Command {
   constructor(target) {
     this.target=target;
     this.infoExecutedCommand=[];
