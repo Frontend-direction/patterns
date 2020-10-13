@@ -14,7 +14,7 @@ const spends = new mySpends();
 console.log(spends.add(20).add(50).initialVal)
 
 // Second Example
-class ShoppingCart {
+export class ShoppingCart {
   constructor() {
     this.products = [];
   }
@@ -24,9 +24,9 @@ class ShoppingCart {
   };
 }
 
-class Discount {
+export class Discount {
   calc(products) {
-    let ndiscount = new NumberDiscount();
+    let ndiscount = new QuantityDiscount();
     let pdiscount = new PriceDiscount();
     let none = new NoneDiscount();
     ndiscount.setNext(pdiscount);
@@ -35,7 +35,7 @@ class Discount {
   };
 }
 
-class NumberDiscount {
+export class QuantityDiscount {
   constructor() {
     this.next = null;
   }
@@ -53,7 +53,7 @@ class NumberDiscount {
   };
 }
 
-class PriceDiscount {
+export class PriceDiscount {
   constructor() {
     this.next = null;
   }
@@ -73,7 +73,7 @@ class PriceDiscount {
   };
 }
 
-class NoneDiscount {
+export class NoneDiscount {
   exec() {
     return 0;
   };
