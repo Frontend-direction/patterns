@@ -1,4 +1,4 @@
-class Bloomberg {
+export class Bloomberg {
   constructor() {
     this.price = 222;
     this.observers = [];
@@ -26,7 +26,7 @@ class Bloomberg {
   }
 }
 
-class Observer {
+export class Observer {
   constructor(state = { price: 0, lastChange:new Date(), id: Math.random() }) {
     this.state = state;  
   }
