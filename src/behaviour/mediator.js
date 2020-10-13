@@ -22,6 +22,8 @@ class Airplane {
   }
 }
 
+export { TrafficTower, Airplane };
+
 const tower = new TrafficTower();
 const an70 =  new Airplane(10, tower);
 const boing =  new Airplane(15, tower);
