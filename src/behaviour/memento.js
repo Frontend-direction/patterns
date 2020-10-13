@@ -4,7 +4,7 @@ class Memento {
   }
 }
 
-const originator = {
+export const originator = {
   store: function(val) {
     return new Memento(val)
   },
@@ -13,7 +13,7 @@ const originator = {
   }
 }
 
-class CareTaker {
+export class CareTaker {
   constructor() {
     this.values = [];
   }
@@ -26,10 +26,3 @@ class CareTaker {
     return this.values[index];
   }
 }
-
-const careTaker = new Caretaker();
-careTaker.addMemento(originator.store("hello"));
-careTaker.addMemento(originator.store("hello world"));
-careTaker.addMemento(originator.store("hello world !!!"));
-
-var result = originator.restore(careTaker.getMemento(2));
