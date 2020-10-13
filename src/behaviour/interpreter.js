@@ -30,6 +30,11 @@ class Num {
   }
 }
 
+export {
+  Num,
+  Min,
+  Sum
+};
 
 const result = new Sum(new Num(100), new Min(new Num(100), new Num(50)));
 result.interpret();
