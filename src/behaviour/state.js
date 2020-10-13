@@ -34,7 +34,7 @@ class GreenLight extends Light {
   }
 }
 
-class TrafficLight {
+export class TrafficLight {
   constructor() {
     this.state = [
       new RedLight(),
