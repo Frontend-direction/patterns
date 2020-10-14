@@ -1,4 +1,4 @@
-class Ninja {
+export class Ninja {
   constructor(name, power) {
     this.name = name
     this.power = power
@@ -19,7 +19,7 @@ class Ninja {
 }
 
 const splinter = new Ninja("Splinter", 100);
-const visitor = (ninja) => ninja.setPowerLevel(ninja.getPowerLevel() * 100);
+export const visitor = (ninja) => ninja.setPowerLevel(ninja.getPowerLevel() * 100);
 
 
 splinter.acceptVisitor(visitor);
