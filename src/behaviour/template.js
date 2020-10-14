@@ -11,13 +11,13 @@ class Emploee {
   }
 }
 
-class Developer extends Emploee {
+export class Developer extends Emploee {
   constructor(name, salary) {
     super(name, salary)
   }
 
   responsability() {
-    return 'Develop high quality programms';
+    return `${this.name} as a Develop has to know at least two programmin language`;
   }
 }
 
