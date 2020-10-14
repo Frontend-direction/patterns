@@ -1,12 +1,12 @@
 // Option 1
-class Sort {
+export class Sort {
   constructor(list) {
     this.list = list;
   }
 }
 
 
-class BubleSort extends Sort {
+export class BubleSort extends Sort {
   constructor(list) {
     super(list);
   }
@@ -28,7 +28,7 @@ class BubleSort extends Sort {
   }
 }
 
-class SelectionSort extends Sort {
+export class SelectionSort extends Sort {
   constructor(list) {
     super(list);
   }
@@ -53,7 +53,7 @@ class SelectionSort extends Sort {
   }
 }
 
-class Strategy {
+export class Strategy {
   initSorting(arr) {
     const sortStrategy = arr.length > 4 ? new BubleSort(arr) : new SelectionSort(arr);
 
@@ -71,28 +71,28 @@ class Vehicle {
   }
 }
 
-class Bus extends Vehicle {
+export class Bus extends Vehicle {
   constructor() {
     super()
     this.timeTaken = 10
   }
 }
 
-class Taxi extends Vehicle {
+export class Taxi extends Vehicle {
   constructor() {
     super()
     this.timeTaken = 5
   }
 }
 
-class Car extends Vehicle {
+export class Car extends Vehicle {
   constructor() {
     super()
     this.timeTaken = 3
   }
 }
 
-class Commute {
+export class Commute {
   travel(transport) {
     return transport.travelTime()
   }
@@ -100,6 +100,6 @@ class Commute {
 
 const commute = new Commute()
 
-// console.log(commute.travel(new Taxi()))
-// console.log(commute.travel(new Bus()))
-// console.log(commute.travel(new Car()))
+console.log(commute.travel(new Taxi()))
+console.log(commute.travel(new Bus()))
+console.log(commute.travel(new Car()))
