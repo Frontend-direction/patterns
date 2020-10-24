@@ -6,8 +6,21 @@ export class Blanket {
     this.material=material;
   }
 
+  setField(key, val) {
+    if (typeof val === 'object') {
+      this[key]=JSON.parse(JSON.stringify(val));
+    } else {
+      this[key] = val
+    }
+  }
+
   clone() {
-    return new Blanket(this.width, this.length, this.material);
+    let clone = new Blanket()
+    let keys = Object.keys(this)
+
+    keys.forEach(k => clone.setField(k, this[k]))
+
+    return clone;
   }
 }
 
